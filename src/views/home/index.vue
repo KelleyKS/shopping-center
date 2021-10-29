@@ -1,7 +1,8 @@
 <template>
-  <div class="dashboard-container">
+  <div class="main_container">
     <Header />
     <Nav/>
+    <Search/>
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import { mapGetters } from 'vuex'
 import Header from '../../components/Home/Header'
 import Nav from '../../components/Home/Nav'
+import Search from '../../components/Home/Search'
 
 export default {
   name: 'Dashboard',
   components: {
     Header,
-    Nav
+    Nav,
+    Search
   },
   computed: {
     ...mapGetters([
@@ -25,11 +28,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dashboard {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_container {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 </style>
