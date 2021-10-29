@@ -1,6 +1,6 @@
 <template>
-    <div class='head' >
-        <div class='header' v-show="flag">
+    <div class='head' v-show="flag">
+        <div class='header'>
         </div>
         <p @click='onClose(false)'>关闭</p>
     </div>
@@ -10,12 +10,13 @@
 <script>
     export default {
         name: 'Header',
-        data: {
-            flag: true
+        data () {
+            return {
+                flag: true
+            }
         },
         methods: {
             onClose: function (flag) {
-                console.log(flag, 'this.flag')
                 this.flag = flag
             }
         }

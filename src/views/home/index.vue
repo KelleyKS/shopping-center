@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
     <Header />
-    <Nav />
+    <Nav/>
   </div>
 </template>
 
@@ -30,6 +30,6 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-itmes: center;
+  align-items: center;
 }
 </style>
